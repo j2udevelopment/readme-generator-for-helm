@@ -14,10 +14,11 @@ const { insertReadmeTable, exportMetadata } = require('./lib/render');
 function getValuesSections(options) {
   const valuesFilePath = options.values;
   const configPath = options.config ? options.config : `${__dirname}/config.json`;
+  const envParameters = options.envParams;
   const CONFIG = require(configPath);
 
   const valuesObject = createValuesObject(valuesFilePath);
-  let valuesMetadata = parseMetadataComments(valuesFilePath, CONFIG);
+  let valuesMetadata = parseMetadataComments(valuesFilePath, CONFIG, envParameters);
 
   // Check the parsed keys are consistent with the real ones
   checkKeys(valuesObject, valuesMetadata);
