@@ -12,7 +12,8 @@ program
   .requiredOption('-v, --values <path>', 'Path to the values.yaml file')
   .option('-r, --readme <path>', 'Path to the README.md file')
   .option('-c, --config <path>', 'Path to the config file')
-  .option('-m, --metadata <path>', 'Path for the metadata output file');
+  .option('-m, --metadata <path>', 'Path for the metadata output file')
+  .option('-e, --env-params', 'Params should be associated with an environment variable');
 
 program.parse(process.argv);
 
