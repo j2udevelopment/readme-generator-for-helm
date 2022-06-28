@@ -9,11 +9,10 @@ involved parameters.
 
 ## TLDR
 
-Install this tool by cloning the repo and install it with npm
+Install this tool with npm:
 
 ```
-git clone https://github.com/bitnami-labs/readme-generator-for-helm.git
-npm install -g readme-generator-for-helm
+npm install -g https://github.com/j2udevelopment/readme-generator-for-helm
 ```
 
 It can be run with environment variable support
